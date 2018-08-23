@@ -1,0 +1,15 @@
+# Travis yaml grantmacken/alpine-openresty
+# https://github.com/grantmacken/alpine-openresty
+sudo: required
+dist: trusty
+os: linux
+language: c
+services:
+  - docker
+install: skip
+script:
+  - export DOCKER_TAG=latest
+  - echo "${DOCKER_TAG}"
+  - docker build --tag  "grantmacken/alpine-openresty:${DOCKER_TAG}" . >/dev/null 2>&1
+  - echo "$DOCKER_PASSWORD" | docker login -u grantmacken --password-stdin
+  - docker push "grantmacken/alpine-openresty:${DOCKER_TAG}"
