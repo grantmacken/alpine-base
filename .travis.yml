@@ -1,5 +1,5 @@
 # Travis yaml grantmacken/alpine-openresty
-# https://github.com/grantmacken/alpine-openresty
+# https://github.com/grantmacken/alpine-base
 sudo: required
 dist: trusty
 os: linux
