@@ -1,15 +1,15 @@
-# Travis yaml grantmacken/alpine-openresty
+# Travis yaml grantmacken/alpine-base
 # https://github.com/grantmacken/alpine-base
+# https://cloud.docker.com/swarm/grantmacken/repository/docker/grantmacken/alpine-base
 sudo: required
 dist: trusty
 os: linux
 language: c
 services:
   - docker
-install: skip
+install: make build
 script:
   - export DOCKER_TAG=latest
   - echo "${DOCKER_TAG}"
-  - docker build --tag  "grantmacken/alpine-base:${DOCKER_TAG}" .
-  - echo "$DOCKER_PASSWORD" | docker login -u grantmacken --password-stdin
-  - docker push "grantmacken/alpine-base:${DOCKER_TAG}"
+# - echo "$DOCKER_PASSWORD" | docker login -u grantmacken --password-stdin
+# - docker push "grantmacken/alpine-base:${DOCKER_TAG}"
