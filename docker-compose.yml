@@ -1,0 +1,12 @@
+version: '3.4'
+services:
+  ash:
+    image: $DOCKER_IMAGE:$DOCKER_TAG
+    container_name: ash
+    stdin_open: true
+    tty: true
+    networks:
+      - www
+networks:
+  www:
+    driver: bridge
