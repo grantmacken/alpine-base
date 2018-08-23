@@ -10,6 +10,6 @@ install: skip
 script:
   - export DOCKER_TAG=latest
   - echo "${DOCKER_TAG}"
-  - docker build --tag  "grantmacken/alpine-openresty:${DOCKER_TAG}" . >/dev/null 2>&1
+  - docker build --tag  "grantmacken/alpine-base:${DOCKER_TAG}" .
   - echo "$DOCKER_PASSWORD" | docker login -u grantmacken --password-stdin
-  - docker push "grantmacken/alpine-openresty:${DOCKER_TAG}"
+  - docker push "grantmacken/alpine-base:${DOCKER_TAG}"
