@@ -9,3 +9,5 @@ docker pull grantmacken/alpine-base
 ```
 
 Test build on [travis-ci](https://travis-ci.org/grantmacken/alpine-base)
+
+docker cloud [builds](https://cloud.docker.com/swarm/grantmacken/repository/docker/grantmacken/alpine-base/builds)
